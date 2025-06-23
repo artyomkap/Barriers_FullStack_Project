@@ -1,0 +1,148 @@
+.footer {
+  background-color: #f2f2f2;
+  padding: 40px 20px 20px;
+  color: #333;
+  font-size: 14px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__info {
+    max-width: 250px;
+  }
+
+  &__logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    color: #666;
+    font-size: 13px;
+  }
+
+  &__menu, &__catalog {
+    min-width: 160px;
+
+    .footer__title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer__list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 6px;
+
+        a {
+          color: #333;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__contact {
+    max-width: 220px;
+
+    .footer__title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .footer__callback {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #0056b3;
+      }
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+  }
+
+  // Адаптивность
+  @media (max-width: 768px) {
+    &__main {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    &__logo {
+      width: 100px;
+    }
+
+    &__menu, &__contact, &__info {
+      max-width: 100%;
+    }
+
+    &__contact .footer__social {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 16px 16px;
+
+    &__logo {
+      width: 80px;
+    }
+
+    .footer__callback {
+      padding: 5px 10px;
+      font-size: 13px;
+    }
+  }
+}

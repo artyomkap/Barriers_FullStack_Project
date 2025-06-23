@@ -1,0 +1,269 @@
+.contacts-title__container h1 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.contacts-title {
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__column {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1);
+
+    &_big {
+      flex: 1 1 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    &-head {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &_number a,
+    &_mail a {
+      font-weight: 700;
+      font-size: 16px;
+      color: #000;
+      display: inline-flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &_number a::before {
+      background-image: url('../../images/icons/phone-blue.svg');
+    }
+
+    &_mail a::before {
+      background-image: url('../../images/icons/mail-blue.svg');
+    }
+
+    &_address {
+      font-weight: 600;
+
+      div {
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          width: 18px;
+          height: 18px;
+          margin-right: 8px;
+          background-image: url('../../images/icons/pin_red.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &__icon a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #6f6f6f;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__telegram a::before { background-image: url('../../images/icons/telegram.svg'); }
+  &__whatsapp a::before { background-image: url('../../images/icons/whatsapp.svg'); }
+  &__viber a::before { background-image: url('../../images/icons/viber.svg'); }
+  &__vk a::before { background-image: url('../../images/icons/vk.svg'); }
+  &__youtube a::before { background-image: url('../../images/icons/youtube.svg'); }
+}
+
+.contacts-form {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__requisites {
+    flex: 1 1 45%;
+    background: #fff;
+    padding: 30px 20px;
+    border: 1px solid #e3e3e3;
+
+    iframe {
+      width: 100%;
+      height: 487px;
+      border: none;
+      display: block;
+    }
+  }
+
+  &__body {
+    flex: 1 1 50%;
+    background: #f2f2f2;
+    padding: 28px 20px;
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      color: #7c7c7c;
+
+      a {
+        color: #454545;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  &__head h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__head p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input,
+    textarea {
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      background: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.contacts-title__column_big {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  .contacts-title__item {
+    flex: 1 1 0;
+    margin-bottom: 0;
+  }
+}
+
+// 📱 Адаптивность
+
+@media (max-width: 1024px) {
+  .contacts-title__column {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .contacts-form__container {
+    flex-direction: column;
+  }
+
+  .contacts-form__requisites,
+  .contacts-form__body {
+    flex: 1 1 100%;
+  }
+
+  .contacts-title__column_big {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts-title__column {
+    flex: 1 1 100%;
+  }
+
+  .contacts-title__item_number a::before,
+  .contacts-title__item_mail a::before,
+  .contacts-title__item_address div::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contacts-title__container h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .contacts-form__head h2 {
+    font-size: 20px;
+  }
+
+  .contacts-form__head p {
+    font-size: 14px;
+  }
+}

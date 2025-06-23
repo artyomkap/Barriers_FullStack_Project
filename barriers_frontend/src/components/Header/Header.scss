@@ -1,0 +1,97 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__logo {
+    height: 60px;
+    margin-right: 16px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      margin-right: 16px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  &__auth {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+
+    @media (min-width: 600px) {
+      margin-top: 0;
+    }
+  }
+
+  &__auth-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    border: 1px solid #007bff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  }
+
+  &__auth-name {
+    font-weight: 500;
+    align-self: center;
+  }
+
+  // Медиа-запросы для телефонов
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__left {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__logo {
+      margin-bottom: 8px;
+    }
+
+    &__nav {
+      flex-direction: column;
+
+      a {
+        margin: 4px 0;
+      }
+    }
+
+    &__auth {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+}

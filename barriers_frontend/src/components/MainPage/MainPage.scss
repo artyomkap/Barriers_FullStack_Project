@@ -1,0 +1,233 @@
+.main-banner {
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.advantages {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .advantage {
+    flex: 1 1 0;
+    min-width: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    &__name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+
+.our-works {
+  padding: 40px 20px;
+  background-color: #ffffff;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    img {
+      width: calc(25% - 15px);
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+.consultation-form {
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+.about-company {
+  padding: 40px 20px;
+  background-color: white;
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    flex: 1 1 50%;
+  }
+
+  &__image {
+    flex: 1 1 40%;
+    max-width: 30%;
+    border-radius: 8px;
+  }
+
+  &__more {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+// 📱 Адаптивность
+@media (max-width: 1024px) {
+  .main-banner img {
+    width: 70%;
+  }
+
+  .main-banner__title {
+    font-size: 2.5rem;
+    bottom: 25%;
+  }
+
+  .advantages__inner {
+    flex-wrap: wrap;
+  }
+
+  .our-works__gallery img {
+    width: calc(33.333% - 13px);
+  }
+
+  .about-company__image {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner img {
+    width: 100%;
+  }
+
+  .main-banner__title {
+    font-size: 2rem;
+    bottom: 30%;
+  }
+
+  .advantages__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .our-works__gallery img {
+    width: calc(50% - 10px);
+  }
+
+  .about-company__grid {
+    flex-direction: column;
+  }
+
+  .about-company__image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .consultation-form form {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-banner__title {
+    font-size: 1.5rem;
+  }
+
+  .our-works__gallery img {
+    width: 100%;
+  }
+
+  .advantages__inner {
+    gap: 15px;
+  }
+}
